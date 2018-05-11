@@ -18,9 +18,9 @@ class LoginController extends CI_Controller {
 		}
 	}
 
-	public function authentication(){
+	public function authentication() {
 		$data = array();
-		if($_POST){
+		if($_POST) {
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('username','Username','required');
 			$this->form_validation->set_rules('password','Password','required');
@@ -42,13 +42,7 @@ class LoginController extends CI_Controller {
 						'role'		=> $row->role
 					);
 					$this->session->set_userdata($data);
-					// $session_data = array(
-					// 	'username'   => $row->username,
-					// 	'password'	=> $row->password,
-					// 	'role'		=> $row->role
-					// );
 
-					// $this->session->set_userdata('logged_in', $session_data);
 					$this->load->model('login/login_model');
 					redirect('DashboardController');
 				}
@@ -93,6 +87,5 @@ class LoginController extends CI_Controller {
 		$this->login_model->signup($data,'user');
 		$this->load->view('login/login');
 	}
-
 	
 }
