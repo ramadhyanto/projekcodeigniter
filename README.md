@@ -1,3 +1,1 @@
-"# projekcodeigniter"
-
-#Sistem Penunjang Keputusan
+# Sistem Penunjang Keputusan
