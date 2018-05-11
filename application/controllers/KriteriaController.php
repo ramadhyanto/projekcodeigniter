@@ -16,12 +16,12 @@ class KriteriaController extends CI_Controller {
 			$data['name'] = $this->session->userdata('name');
 			$data['data'] = $this->kriteria_model->get_kriteria();
 			$this->load->view('common/header');
-			$this->load->view('kriteria/kriteria',$data);
+			$this->load->view('kriteria/kriteria', $data);
 		}
 		else {
 			$data['data'] = 'SUKSES';
 			$data['name'] = $this->session->userdata('name');
-			$this->load->view('dashboard/dashboard',$data);
+			$this->load->view('dashboard/dashboard', $data);
 		}
 		
 	}
